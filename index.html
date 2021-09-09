@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="hero-container">
+      <div class="header">
+        <img src="./images/logo.png" alt="logo" class="logo" />
+      </div>
+      <div class="content">
+        <!-- Column 1 -->
+        <section class="col-1">
+          <h1 class="headline">
+            Hi! I'm Mike! <br />
+            I <span class="accent">travel</span> and
+            <span class="accent">take pictures</span>.
+          </h1>
+          <div class="body-copy">
+            <p>
+              I am a professional landscape photographer. My photos have been
+              featured on National Geographic, Time, The New Yorker, Men's
+              Health, and many more.
+            </p>
+            <p>
+              I am constantly traveling and trying out new methods to capture
+              that perfect shot. Subscribe to my newsletter today to stay in
+              touch with where I am and to gain access to all new photos, the
+              behind-the-scenes, and the tips and tricks to make you a world
+              class photographer.
+            </p>
+          </div>
+        </section>
+        <!-- end of Column 1 -->
+        <!-- Column 2 -->
+        <section class="col-2">
+          <div class="cta">
+            <div class="cta-content">
+              <p class="cta-copy">
+                Are you ready for the <span class="cta-accent">adventure</span>?
+              </p>
+              <input type="email" id="email" name="email" placeholder="Email" />
+              <p class="error" id="error">Please enter your Email</p>
+              <button type="submit" class="submit-btn" id="submit">
+                Come along for the ride!
+              </button>
+              <div class="animated-icons" id="animated-icons">
+                <!-- loading circle -->
+                <div class="lds-ring" id="btn-loading">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+
+                <!-- checkmark -->
+                <svg
+                  class="checkmark"
+                  id="checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  width="20"
+                  height="20"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 32 32"
+                >
+                  <rect
+                    x="0"
+                    y="0"
+                    width="32"
+                    height="32"
+                    fill="none"
+                    stroke="none"
+                  />
+                  <g
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path class="check" d="M2 20l10 8L30 4" />
+                  </g>
+                </svg>
+                <!-- close animated-icons -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end of Column 2 -->
+      </div>
+      <p class="copyright">
+        &copy; <span id="year">2020</span> Mikko. All rights reserved.
+        <a href="#" target="_top">Privacy Policy</a> | Created with
+        <a href="#" target="_top">Leadpages</a>
+      </p>
+    </div>
+    <!-- end of Hero Container -->
+  </body>
+  <script src="script.js"></script>
+</html>

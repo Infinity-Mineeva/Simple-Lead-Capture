@@ -1,0 +1,484 @@
+
+/* ==================
+    VARIABLES 
+=====================*/
+
+:root{
+
+    /* font colors */
+    --cta-accent: rgba(0, 240, 255, 1);
+    --accent-copy: rgba(8, 218, 233, 1);
+    --main-white: #fff;
+    /* error colors */
+    --error: #fa3246;
+    --errorBorder: 1px solid #fa3246;
+    --errorShadow: #fa3246 0 0 1.5px 1px;
+    /* font for error */
+    --mainFont: font-family: 'Lato', sans-serif;
+    /* default Border style for Email Input box */
+    --default-border: 1px solid rgb(118, 118, 118);
+}
+
+
+/* ===================
+    GLOBAL STYLES 
+======================*/
+
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: var(--main-white);
+}
+
+
+body {
+    display: flex;
+    width: 100vw;
+    background: linear-gradient(rgba(24, 23, 92, 0.5), rgba(24, 23, 92, 0.5)), url(./images/bg-image.jpg) center/cover no-repeat;
+
+}
+
+.hero-container{
+    width: 80%;
+    max-width: 1094px;
+    margin: 0em auto;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 3vw;
+    padding-right: 2vw;
+    padding-bottom: 3vw;
+    padding-left: 2vw;
+
+}
+
+a {
+    color: var(--main-white);
+}
+
+a:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px){
+    body{
+        height: 100vh;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+.hero-container{
+    margin: 0em 2em;
+}
+  
+}
+
+@media screen and (min-width: 1024px){
+
+body{
+    align-items: center;
+}
+
+
+    .hero-container{
+       
+width: 80%;
+max-width: 1084px;
+max-height: 700px;
+
+
+    }
+}
+
+/* ===============
+    LOGO STYLE
+================== */
+.header{
+    margin-top: 1.5em;
+}
+
+.logo{
+    width: 100%;
+    max-width: 186px;
+}
+
+
+@media screen and (min-width: 768px){
+
+    .logo{
+        width: 15%;
+    }
+}
+@media screen and (min-width: 1024px){
+
+    .logo{
+        width: 186px;
+    }
+}
+
+
+
+
+/* =================
+    BODY STYLES
+==================== */
+.content{
+    margin-bottom: 1em;
+}
+
+.col-1,.col-2{
+    width: 58%;
+}
+
+.headline{
+    margin-top: 1.5em;
+    font-size: 2.063rem;
+    width: 150%;
+}
+
+.accent {
+    color: var(--accent-copy);
+}
+
+.body-copy{
+    line-height: 1.5em;
+    width: 150%;
+}
+
+.col-2{
+    padding-top: 1.5em;
+}
+
+
+@media screen and (min-width: 768px) {
+    .content{
+        width: 90vw;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        align-content: center;
+        position: relative;
+
+    }
+
+    .headline {
+        word-wrap: break-word;
+        font-size: 3rem;
+    }
+
+    .body-copy{
+        font-size: 1.1rem;
+  
+    }
+
+}
+
+
+@media screen and (min-width: 1024px){
+    .content{
+        width: unset;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        
+
+    }
+
+
+    .headline {
+        max-width: 578px;
+    }
+    .body-copy {
+        width: 526px;
+        max-width: 576px;
+    }
+
+    .col-1 {
+        width: 45%;
+        padding-right: 4vw;
+
+    }
+
+
+    .col-2{
+        width: 30%;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+
+/* ==========================
+    CALL TO ACTION STYLES 
+=============================*/
+
+.cta {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.08);
+    width: 190%;
+    padding-top: 4vw;
+    padding-right: 2vw;
+    padding-bottom: 4vw;
+    padding-left: 2vw;
+    position: relative;
+    left: -1.5em;
+    
+}
+
+.cta-content{
+    display: flex;
+    width: 90%;
+    max-width: 266px;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.cta-copy {
+    font-size: 1.26rem;
+    font-weight: 700;
+    flex: 0 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+.cta-accent {
+    color: var(--cta-accent);
+}
+
+
+
+@media screen and (min-width: 768px){
+
+    .cta {
+        left: unset;
+        width: 150%;
+        margin-top: 50%;
+        text-align: center;
+    }
+
+    .cta-copy{
+        font-size: 1.5rem;
+        
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .cta{
+    width: 100%;
+    flex: 1 1 auto;
+    }
+
+    .cta-content{
+        width: 100%;
+     /* max-width: 266px; */
+    }
+}
+
+
+
+/* ============================
+    ERROR & SUBMIT BTN STYLES 
+===============================*/
+
+
+.error {
+    display: none;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-size: 0.75rem;
+    color: var(--error);
+    margin-top: .5em;
+
+}
+
+
+
+input[type="email"] {
+    display: inline-block;
+    font-family: var(--mainFont);
+    height: 2em;
+    padding: 0 0.5em;
+    border-radius: 3px;
+    border: none;
+}
+
+input::placeholder {
+    font-size: 0.9rem;
+    font-family: var(--mainFont);
+  }
+  
+
+  .submit-btn{
+      position: relative;
+      width: 100%;
+      margin-top: .5em;
+      padding: .9em 2em;
+      font-weight: 700;
+      background-color: var(--cta-accent);
+      border: solid 1px var(--cta-accent);
+      cursor: pointer;
+  }
+
+  .submit-btn:hover{
+      background-color: rgb(0,192,204);
+      border-color: rgb(0,192,204);
+  }
+
+/*  class to disable button after user submits email */
+  .disabled {
+    pointer-events: none;
+    opacity: 0.3;
+
+  }
+
+@media screen and (min-width: 768px){
+    input[type="email"] {
+        padding: 0 .6em;
+    }
+    .submit-btn {
+        width: 100%;
+        display: block;
+        padding: .8em .2em;
+        font-size: 1.125rem;
+
+        text-align: center;
+        line-height: 1.5;
+
+    }
+  
+}
+
+@media screen and (min-width: 1024px){
+    .submit-btn{
+        padding: .85em .5em;
+        font-size: 1rem;
+      
+    }
+}
+
+
+
+
+/* ======================
+    ANIMATION STYLES
+========================= */
+
+
+.animated-icons{
+    position: relative;
+    bottom: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+}
+
+
+@media screen and (min-width: 768px) {
+    .animated-icons{
+        bottom: 4em;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .animated-icons{
+
+      bottom: 2.5em;
+    }
+}
+
+
+/* loading ring -- from https://loading.io/css/ */
+
+
+.lds-ring {
+    display: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: 8px;
+    border: 2px solid black;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) 1;
+    border-color: black transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .progress {
+        bottom: .5em;
+    }
+  }
+
+  /* CHECKMARK */
+
+.checkmark{
+    display: inline-block;
+    position: relative;
+    bottom: -.5em;
+    right: -.5em;
+    stroke-dasharray: 70;
+  stroke-dashoffset: 70;
+  fill: none;
+
+}
+
+.confirmed {
+    stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.6s linear;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .checkmark{
+        bottom: .05em;
+    }
+  }
+
+
+
+/* COPYRIGHT */
+.copyright {
+    color: var(--main-white);
+    font-size: .8rem;
+    width: 100%;
+    padding: 1vw;
+}
+
+
+@media only screen and (min-width: 750px) {
+    .copyright{
+        padding-left: 0;
+    }
+}
